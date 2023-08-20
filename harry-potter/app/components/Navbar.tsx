@@ -19,11 +19,11 @@ const Navbar: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between">
                     <h1 className="text-white text-2x1 font-semibold">
-                        Harry Potter<span className="text-yellow-500">App</span>
+                        Harry Potter<span className="text-yellow-500"> App</span>
                     </h1>
                     <ul className="flex items-center space-x-4 md:space-x-8">
-                        {navLinks.map((link, index) => (
-                            <li>
+                        {navLinks.map((link) => (
+                            <li key={link.label}>
                                 <Link
                                 href={link.url}
                                 className="text-white hover: text-yellow-500 transition-colors duration-200 "
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
                             </Link>
                             </li>
                         ))}
-                    </ul>h
+                    </ul>
                 </div>
             </div>
             
