@@ -21,7 +21,11 @@ const SearchPage: React.FC = () => {
     return (
         <div>
         <SearchInput onSearch={handleSearch} /> 
-        <CharacterSection />
+        {details !== null ? (
+            <CharacterSection details={details} />
+        ) : (
+            <p>Loading or no details available...</p>
+        )}
         </div>
     );
 };
