@@ -1,8 +1,20 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google';
+"use client";
+import React from 'react';
+import CharacterCard from './components/CharacterCard';
+import { CharacterCard as CharacterCardType } from './models/character';
 
-export default function Home() {
+const Home: React.FC = () => {
+  const characterCard: CharacterCardType = {
+    //replace placeholders/
+    name: "",
+    dateOfBirth: "",
+  };
+
   return (
-    <div>Harry Potter</div>
-  )
-}
+    <div>
+      <CharacterCard characterCard={[characterCard]} />
+    </div>
+  );
+};
+
+export default Home;
